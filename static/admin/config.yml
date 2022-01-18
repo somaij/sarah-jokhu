@@ -1,4 +1,5 @@
 backend:
-name: github
+   name: github
    repo: somaij/sarah-jokhu
+   branch: main
 media_folder: public/static/assets
