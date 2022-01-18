@@ -1,0 +1,4 @@
+backend:
+name: github
+   repo: somaij/sarah-jokhu
+media_folder: public/static/assets
