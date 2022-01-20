@@ -12,7 +12,7 @@ module.exports = {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "./public/static/assets/"
+      "path": "public/static/assets/"
     },
     __key: "images"
   },{
