@@ -6,13 +6,13 @@ module.exports = {
   plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": `${__dirname}/src/images/icon.png`
     }
   }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "/public/static/assets/"
+      "path": `${__dirname}/public/static/assets/`
     },
     __key: "images"
   },{
@@ -23,7 +23,7 @@ module.exports = {
           resolve: `gatsby-plugin-netlify-cms-paths`,
           options: {
             // Path to your Netlify CMS config file
-            cmsConfig: `/static/admin/config.yml`,
+            cmsConfig: `${__dirname}/static/admin/config.yml`,
           },
         },
       ],
@@ -32,7 +32,7 @@ module.exports = {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
-      "path": "./src/pages/"
+      "path": `${__dirname}/src/pages/`
     },
     __key: "pages"
   },
