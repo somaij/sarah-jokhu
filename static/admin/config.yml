@@ -2,7 +2,7 @@ backend:
    name: github
    repo: somaij/sarah-jokhu
    branch: main
-media_folder: public/static/assets
+media_folder: src/images
 public_folder: assets
 collections:
   - name: blog
