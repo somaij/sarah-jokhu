@@ -1,0 +1,121 @@
+*,
+*:after,
+*:before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    outline: transparent;
+}
+
+html {
+	height: 100%;
+	min-height: 100%;
+	scroll-behavior: smooth;
+}
+@keyframes colourchangingbackground {
+	0% {
+		background-color: #E7F3F3;
+	}
+
+	35% {
+		background-color: #EEF3E7;
+	}
+
+	65% {
+		background-color: #F3E9E7;
+	}
+
+	100% {
+		background-color: #E7F3F3;
+	}
+}
+
+@keyframes colourchangingtext {
+	0% {
+		color: #E7F3F3;
+	}
+
+	35% {
+		color: #EEF3E7;
+	}
+
+	65% {
+		color: #F3E9E7;
+	}
+
+	100% {
+		color: #E7F3F3;
+	}
+}
+
+@keyframes colourchangingborder {
+	0% {
+		border-color: #E7F3F3;
+	}
+
+	35% {
+		border-color: #EEF3E7;
+	}
+
+	65% {
+		border-color: #F3E9E7;
+	}
+
+	100% {
+		border-color: #E7F3F3;
+	}
+}
+
+body {
+	font: 400 16px/1.6 'Inter', sans-serif;
+	margin: 0;
+	min-height: 100%;
+	display: flex;
+    flex-direction: column;
+    animation-name: colourchangingbackground;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+}
+h1,h2,h3{
+    font-family: 'Abril Fatface', serif;
+    margin:0;
+    font-weight: 400;
+    line-height: 1.2;
+}
+p{
+    margin:0 0 1rem;
+}
+h1{
+    font-size:5rem;
+}
+h2{
+	font-size:3rem;
+}
+h3{
+	font-size:2rem;
+}
+a {
+    color: #444;
+    text-decoration: none;
+    transition:250ms all ease;
+}
+.btn {
+	font-size: 0.8rem;
+	font-weight: 900;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 0.75rem 2rem;
+	transition: 250ms all ease;
+    background-color:#000;
+    color:#FFF;
+    border:2px solid transparent;
+}
+input[type=text], input[type=email], textarea{
+    background-color:transparent;
+    padding:1.2rem 1rem 1rem;
+    width:100%;
+    border:2px solid #000;
+    transition: 250ms all ease;
+}

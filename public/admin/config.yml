@@ -1,4 +1,45 @@
 backend:
-name: github
+   name: github
    repo: somaij/sarah-jokhu
+   branch: main
 media_folder: public/static/assets
+public_folder: assets
+collections:
+  - name: blog
+    label: Blog
+    folder: content/blog
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: description, label: Description }
+      - { name: image, label: Image, widget: image }
+      - { name: body, label: Body, widget: markdown }
+      - label: "CTA"
+        name: "cta"
+        widget: "object"
+        fields: 
+          - {label: Title, name: ctaTitle, widget: string}
+          - {label: Text, name: ctaText, widget: text}
+          - {label: Button Text, name: ctaBtn, widget: text}
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        fields: 
+          - {label: Title, name: seoTitle, widget: string}
+          - {label: Text, name: seoDescription, widget: text}
+  - name: page
+    label: Page
+    files:
+    - file: "content/pages/index.md"
+      label: "Home Page"
+      name: "index" 
+      fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home"}
+        - {label: Title, name: title, widget: markdown}
+        - {label: Subtitle, name: subtitle, widget: markdown}
+        - {label: "Blog Background", name: blog-background, widget: image }
+        - {label: About, name: body, widget: markdown}
+        - {label: "About Image", name: about-image, widget: image }

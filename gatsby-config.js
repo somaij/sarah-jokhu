@@ -12,9 +12,22 @@ module.exports = {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "./src/images/"
+      "path": "./public/static/assets/"
     },
     __key: "images"
+  },{
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-plugin-netlify-cms-paths`,
+          options: {
+            // Path to your Netlify CMS config file
+            cmsConfig: `/static/admin/config.yml`,
+          },
+        },
+      ],
+    },
   }, {
     resolve: 'gatsby-source-filesystem',
     options: {
@@ -22,5 +35,12 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `markdown-blog`,
+      path: `${__dirname}/content/blog/`,
+    },
   }]
 };
