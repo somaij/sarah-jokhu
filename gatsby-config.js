@@ -9,10 +9,10 @@ module.exports = {
 				"icon": `${__dirname}/src/images/icon.png`
 			}
 		}, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-			resolve: 'gatsby-source-filesystem',
+			resolve: `gatsby-source-filesystem`,
 			options: {
 				"name": "images",
-				"path": `${__dirname}/public/static/assets`
+				"path": `${__dirname}/src/images/`
 			},
 			__key: "images"
 		}, {
