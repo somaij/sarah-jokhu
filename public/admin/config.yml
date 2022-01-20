@@ -2,12 +2,13 @@ backend:
    name: github
    repo: somaij/sarah-jokhu
    branch: main
-media_folder: public/static/assets
+media_folder: src/images
 public_folder: assets
 collections:
   - name: blog
     label: Blog
     folder: content/blog
+    slug: "{{slug}}"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
@@ -39,7 +40,10 @@ collections:
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home"}
         - {label: Title, name: title, widget: markdown}
-        - {label: Subtitle, name: subtitle, widget: markdown}
-        - {label: "Blog Background", name: blog-background, widget: image }
+        - {label: "Background", name: background, widget: image }
+        - label: "Publications"
+          name: "publications"
+          widget: "list"
+          fields:
+            - {label: Publication, name: publication, widget: markdown}
         - {label: About, name: body, widget: markdown}
-        - {label: "About Image", name: about-image, widget: image }

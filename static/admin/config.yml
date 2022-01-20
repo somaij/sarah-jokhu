@@ -8,6 +8,7 @@ collections:
   - name: blog
     label: Blog
     folder: content/blog
+    slug: "{{slug}}"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
