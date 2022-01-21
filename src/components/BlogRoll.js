@@ -60,6 +60,9 @@ export default ({count}) => (
         ) {
           edges {
             node {
+              fields {
+                slug
+              }
               frontmatter {
                 title
                 templateKey
