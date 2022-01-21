@@ -15,23 +15,7 @@ module.exports = {
       "path": "./src/images/"
     },
     __key: "images"
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./content/pages/"
-    },
-    __key: "pages"
-  },
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `markdown-blog`,
-      path: "./content/blog",
-    }
-  },
-  {
+  },{
     resolve: `gatsby-transformer-remark`,
     options: {
       plugins: [
@@ -44,6 +28,19 @@ module.exports = {
         },
       ],
     },
-  } 
-  ]
+  }, {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "pages",
+      "path": "./content/pages/"
+    },
+    __key: "pages"
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `markdown-blog`,
+      path: "./content/blog",
+    },
+  }]
 };
