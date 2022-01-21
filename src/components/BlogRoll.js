@@ -66,7 +66,7 @@ export default ({count}) => (
                 path
                 date
                 description
-                image
+                
               }
             }
           }
