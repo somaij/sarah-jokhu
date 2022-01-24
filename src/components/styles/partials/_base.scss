@@ -1,0 +1,54 @@
+#masthead {
+    
+    background-size: cover;
+    max-width: 1200px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto 0;
+    text-align: center;
+    position: relative;
+  
+    .text {
+      border: 4px solid #FFF;
+      animation-name: colourchangingborder;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      padding: 3rem;
+      h1,.sub {
+        animation-name: colourchangingtext;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+    }
+  
+    &::before, &::after {
+      content: "";
+      height: 60px;
+      width: 60px;
+      position: absolute;
+      border: 14px solid #FFF;
+      animation-name: colourchangingborder;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+    }
+  
+    &::before {
+      bottom: 0;
+      left: 0;
+    }
+  
+    &::after {
+      top: 0;
+      right: 0;
+    }
+  }
+
+#home-blog{
+    padding:5rem 0;
+    h2{
+        margin-bottom:2rem;
+    }
+}

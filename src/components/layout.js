@@ -31,9 +31,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
          <main>{children}</main>
          <footer>
+           <div class="container">
+             <div class="row">
+               <div class="col-12">
            Sarah Jokhu © {new Date().getFullYear()}. <br class="d-block d-lg-none"/> Built by
            {` `}
            <a href="https://jasonsomai.com">Jason Somai</a> with ❤️.
+           </div>
+           </div>
+           </div>
          </footer>
      </div>
    )

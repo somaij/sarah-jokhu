@@ -9,49 +9,64 @@ import { Helmet } from "react-helmet"
 
 const IndexPage = ({ data }) => {
   console.log("data,", data)
+  var mastheadStyles = {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${data.markdownRemark.frontmatter.background.publicURL})`
+  }
   return (
     
     <Layout>
-
-      <div id="home-blog">
+      <section id="masthead"  style={mastheadStyles}>
+		<div class="text">
+			<div class="sub">{data.markdownRemark.frontmatter.title}</div>
+			<h1>Sarah Jokhu</h1>
+		</div>
+	</section>
+      <section id="home-blog">
 
       <div class="container">
         <div class="row">
-          <div class="col-12 text-center">
+          <div class="col-12 d-flex justify-content-center">
             <h2>Blog</h2>
           </div>
         </div>
+        
+
         <BlogRoll/>
+        
       </div>
-      </div>
+      </section>
+      <section id="publications">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <h2>Publications</h2>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   )
 }
 
 export default IndexPage
 
-// export const pageQuery = graphql`
-//   query IndexPageTemplate {
-//     markdownRemark(frontmatter: { templateKey: { eq: "home" } }) {
-//       frontmatter {
-//         title
-//         subtitle
-//         blog_background{
-//           publicURL
-//         }
-//         about_image{
-//           childImageSharp {
-//             fixed(width: 960) {
-//               ...GatsbyImageSharpFixed
-//             }
-//           }
-//         }
-//         seo{
-//           seoTitle
-//           seoDescription
-//         }
-//       }
-//       html
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query IndexPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: null } }) {
+      frontmatter {
+        title
+        background{
+          publicURL
+        }
+        publications{
+          publication
+        }
+        seo{
+          seoTitle
+          seoDescription
+        }
+      }
+      html
+    }
+  }
+`

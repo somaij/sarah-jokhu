@@ -10,16 +10,16 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div class="row justify-content-center">
+      <div class="row">
       
         {posts &&
           posts.map(({ node: post }) => (
             <div className="col-11 col-lg-4">
-              <Link to={"/blog/" + post.frontmatter.path} className="post-preview">
-                  {post.frontmatter.image ? (
+              <Link to={"/blog" + post.fields.slug} className="post-preview">
+                  {post.frontmatter.image.publicURL ? (
                     <div className="image">
-                      <Img
-                        fixed={post.frontmatter.image}
+                      <img
+                        src={post.frontmatter.image.publicURL}
                         />
                     </div>
                   ) : null}
@@ -27,10 +27,11 @@ class BlogRoll extends React.Component {
                 <h3>
                       {post.frontmatter.title}
                 </h3>
+                <hr/>
                 <p>
                   {post.frontmatter.description}
                 </p>
-                <span className="btn outline white">Read</span>
+                <span className="btn solid">Read Now</span>
                 </div>
                 </Link>
                 </div>
@@ -60,13 +61,18 @@ export default ({count}) => (
         ) {
           edges {
             node {
+              fields {
+                slug
+              }
               frontmatter {
                 title
                 templateKey
                 path
                 date
                 description
-                
+                image{
+                  publicURL
+                }
               }
             }
           }
