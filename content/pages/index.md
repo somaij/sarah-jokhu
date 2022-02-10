@@ -1,5 +1,5 @@
 ---
-title: Research Analyst
+title: Clinical Research Analyst
 background: assets/mast.jpeg
 publications:
   - publication: >-
