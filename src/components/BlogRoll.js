@@ -14,7 +14,7 @@ class BlogRoll extends React.Component {
       
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="col-11 col-lg-4">
+            <div className="col-11 col-lg-6">
               <Link to={"/blog" + post.fields.slug} className="post-preview">
                   {post.frontmatter.image.publicURL ? (
                     <div className="image">
@@ -67,7 +67,6 @@ export default ({count}) => (
               frontmatter {
                 title
                 templateKey
-                path
                 date
                 description
                 image{
