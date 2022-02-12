@@ -33,7 +33,11 @@ const IndexPage = ({ data }) => {
         
 
         <BlogRoll/>
-        
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <a href="/blog" class="btn solid">All Blogs</a>
+          </div>
+        </div>
       </div>
       </section>
       <section id="publications">

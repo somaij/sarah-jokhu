@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-blog-js",
     "path": "/blog/",
-    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"Test 3","path":"dapath","templateKey":"blog-post","date":"January 21, 2022","description":"this is the third test"}}}]}},"pageContext":{}},
+    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"Here’s Why Clinical Research Is Not so Scary in the 21st Century.","templateKey":"blog-post","date":"February 12, 2022","description":"Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum."}}}]}},"pageContext":{}},
     "staticQueryHashes": ["3649515864"]}
